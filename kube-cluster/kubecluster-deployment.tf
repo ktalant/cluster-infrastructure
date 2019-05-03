@@ -7,7 +7,7 @@ resource "google_container_cluster" "gke-cluster" {
     name                = "${var.cluster_name}"
     network             = "default"
     subnetwork          = "default"
-    location            = "us-central1-a"
+    zone                = "us-central1-a"
     min_master_version  = "1.11.8-gke.6"
     initial_node_count  = "${var.initial_node_count}"
 
