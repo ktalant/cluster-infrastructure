@@ -1,3 +1,8 @@
+# provider "google" {
+#   credentials   = "${file("${var.cpath}")}"   #GOOGLE_CREDENTIALS to the path of a file containing the credential JSON
+#   project       = "${var.project}"
+#   region        = "${var.region}"
+# }
 resource "google_container_cluster" "gke-cluster" {
     name                = "${var.cluster_name}"
     network             = "default"
