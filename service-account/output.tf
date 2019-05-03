@@ -14,14 +14,3 @@ output "unique_id" {
     value       = "${google_service_account.default.unique_id}"
     description = "The unique id of the service account."
 }
-
-# ==================================================================
-# private key and decoded private key
-# ==================================================================
-output "private_key" {
-    value = "${google_service_account_key.default.private_key}"
-}
-
-output "decoded_private_key" {
-    value = "${base64decode(google_service_account_key.default.private_key)}"
-}
