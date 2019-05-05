@@ -1,4 +1,5 @@
+cluster_name            =    "fuchicorp"
 initial_node_count      =    "2"
-# cpath                   =    "/root/terraform-google-storage-bucket/focus-surfer-237100-28366fd72149.json"
-# # project                 =    "project-id-7382984"
-# region                  =    "us-central1"
+cpath                   =    "/home/fuchicorp/cluster-infrastructure/kube-cluster/service_account_key.json"
+project                 =    "fuchicorp-239622"
+region                  =    "us-central1"
