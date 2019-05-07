@@ -8,13 +8,6 @@ resource "google_service_account" "fuchicorp" {
     display_name        = "${var.display_name}"
 }
 
-# resource "google_project_iam_member" "fuchicorp" {
-#     depends_on  = ["google_service_account.fuchicorp"]
-#     count       =  "${length(var.roles)}"      #not sure why we need "legth" part
-#     role        =  "${element(var.roles, count.index)}"   #not sure why we need "element" and "count.index" part
-#     member      =  "serviceAccount:${google_service_account.fuchicorp.email}"
-# }
-
 resource "google_service_account_key" "fuchicorp" {
     depends_on          = ["google_service_account.fuchicorp"]
     service_account_id  = "${google_service_account.fuchicorp.name}"
