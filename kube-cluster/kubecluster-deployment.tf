@@ -12,8 +12,9 @@ resource "google_container_cluster" "cluster-fuchicorp-com" {
     initial_node_count  = "${var.initial_node_count}"
 
     node_config {
-      # image_type   = "${var.node_image_type}"
+      name              = "${var.node_name}"
       machine_type      = "n1-standard-4"
       # disk_size_gb = "${var.node_disk_size_gb}"
+      # image_type   = "${var.node_image_type}"
   }
 }
