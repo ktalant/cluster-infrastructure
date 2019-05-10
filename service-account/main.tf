@@ -10,7 +10,7 @@ resource "google_service_account" "fuchicorp" {
 
 resource "google_service_account_iam_binding" "fuchicorp-service-account" {
   service_account_id = "${google_service_account.fuchicorp.name}"
-  role               = "${roles}"
+  role               = "${var.roles}"
 }
 
 resource "google_service_account_key" "fuchicorp" {
