@@ -13,6 +13,12 @@ resource "google_service_account_iam_binding" "fuchicorp-service-account" {
   role               = "${var.roles}"
 }
 
+resource "google_service_account_iam_member" "container-admin" {
+  service_account_id = "${google_service_account.fuchicorp.name}"
+  role               = "${var.roles}"
+  member             = "serviceAccount:${google_service_account.fuchicorp.email}"
+}
+
 resource "google_service_account_key" "fuchicorp" {
     depends_on          = ["google_service_account.fuchicorp"]
     service_account_id  = "${google_service_account.fuchicorp.name}"
