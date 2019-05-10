@@ -8,10 +8,10 @@ resource "google_service_account" "fuchicorp" {
     display_name        = "${var.display_name}"
 }
 
-resource "google_service_account_iam_binding" "fuchicorp-service-account" {
-  service_account_id = "${google_service_account.fuchicorp.name}"
-  role               = "${var.roles}"
-}
+# resource "google_service_account_iam_binding" "fuchicorp-service-account" {
+#   service_account_id = "${google_service_account.fuchicorp.name}"
+#   role               = "${var.roles}"
+# }
 
 resource "google_service_account_iam_member" "container-admin" {
   service_account_id = "${google_service_account.fuchicorp.name}"
