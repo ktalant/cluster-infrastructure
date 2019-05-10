@@ -9,15 +9,7 @@ resource "google_container_cluster" "cluster-fuchicorp-com" {
     subnetwork          = "default"
     zone                = "us-central1-a"
     min_master_version  = "1.11.8-gke.6"
-    remove_default_node_pool = true
     initial_node_count  = "${var.node_count}"
-}
-
-resource "google_container_node_pool" "node-fuchicorp-com" {
-  name       = "${var.node_name}"
-  location   = "us-central1-a"
-  cluster    = "${google_container_cluster.cluster-fuchicorp-com.name}"
-  node_count = "${var.node_count}"
 
     node_config {
       machine_type      = "n1-standard-4"
