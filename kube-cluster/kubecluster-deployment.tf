@@ -15,7 +15,7 @@ resource "google_container_cluster" "cluster-fuchicorp-com" {
 
 resource "google_container_node_pool" "node-fuchicorp-com" {
   name       = "${var.node_name}"
-  location   = "us-central1"
+  location   = "us-central1-a"
   cluster    = "${google_container_cluster.cluster-fuchicorp-com.name}"
   node_count = "${var.node_count}"
 
