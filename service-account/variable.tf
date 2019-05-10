@@ -7,7 +7,7 @@ variable "display_name" {
 variable "roles" {
     # type        = "list"
     description = "The roles that will be granted to the account."
-    default     = "roles/cluster.owner"
+    default     = "roles/owner"
 }
 variable "cpath" {}
 variable "region" {}
