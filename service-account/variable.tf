@@ -7,7 +7,7 @@ variable "display_name" {
 variable "roles" {
     # type        = "list"
     description = "The roles that will be granted to the account."
-    default     = "roles.serviceAccount.admin"
+    default     = "roles/container.admin"
 }
 variable "cpath" {}
 variable "region" {}

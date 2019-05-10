@@ -1,4 +1,4 @@
-project_id      =       "civil-celerity-239622"
+project_id      =       "tough-country-240119"
 display_name    =       "fuchicorp"
-cpath           =       "/home/fuchicorp/cluster-infrastructure/service-account/account.json"
+cpath           =       "/root/cluster-infrastructure/service-account/account.json"
 region          =       "us-central1"  
