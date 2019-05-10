@@ -4,7 +4,7 @@ provider "google" {
   region      = "${var.region}"
 }
 resource "google_service_account" "fuchicorp" {
-    account_id          = "${var.account_id}"
+    account_id          = "${var.project_id}"
     display_name        = "${var.display_name}"
 }
 
