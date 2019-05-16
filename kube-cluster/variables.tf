@@ -4,3 +4,4 @@ variable "cpath"  {}
 variable "project" {}
 variable "region" {}
 variable "node_name" {}
+variable "bastion_os" {}

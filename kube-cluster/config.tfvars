@@ -1,0 +1,5 @@
+cluster_name            =    "fuchicorp"
+initial_node_count      =    "2"
+cpath                   =    "/home/fuchicorp/cluster-infrastructure/kube-cluster/service_account_key.json"
+project                 =    "indigo-medium-231619"
+region                  =    "us-central1"
