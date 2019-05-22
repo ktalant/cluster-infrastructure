@@ -1,3 +1,8 @@
+provider "google" {
+  credentials   = "${file("${var.cpath}")}"   #GOOGLE_CREDENTIALS to the path of a file containing the credential JSON
+  project       = "${var.project}"
+  region        = "${var.region}"
+}
 resource "google_compute_instance" "centos7" {
   name         = "centos7"
   machine_type = "n1-standard-1"
