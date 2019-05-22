@@ -15,5 +15,13 @@ resource "google_compute_instance" "centos7" {
       type = "pd-standard"
     }
   }
+  network_interface {
+    network = "default"
+
+#    access_config {
+#      // Ephemeral IP
+#    }
+  }
+
   metadata_startup_script = "${file("userdata.sh")}"
 }
