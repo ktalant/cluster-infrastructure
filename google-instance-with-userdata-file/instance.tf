@@ -18,9 +18,9 @@ resource "google_compute_instance" "centos7" {
   network_interface {
     network = "default"
 
-#    access_config {
-#      // Ephemeral IP
-#    }
+    access_config {
+      // Ephemeral IP
+    }
   }
 
   metadata_startup_script = "${file("userdata.sh")}"
