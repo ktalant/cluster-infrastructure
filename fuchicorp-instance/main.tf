@@ -6,7 +6,6 @@ resource "google_compute_instance_template" "bastion" {
   count               = "${var.count}"
   # name  = "${var.name_prefix}-${count.index}"
 
-
   // boot disk
   disk {
     source_image      = "CentOS 7"
