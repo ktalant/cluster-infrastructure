@@ -12,11 +12,10 @@ resource "google_compute_instance_template" "vm_instance" {
   # name  = "${var.name_prefix}-${count.index}"
 
     // Use an existing disk resource
-  disk {
-    // Instance Templates reference disks by name, not self link
-    source      = "${google_compute_disk.bastion.name}"
-    auto_delete = false
-    boot        = false
+  boot_disk {
+    initialize_params {
+      image = "centos-cloud/centos-7"
+    }
   }
  
 
