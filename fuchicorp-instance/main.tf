@@ -11,12 +11,7 @@ resource "google_compute_instance_template" "vm_instance" {
   count               = "${var.count}"
   # name  = "${var.name_prefix}-${count.index}"
  
-  // Create a new boot disk from an image
-  disk {
-    source_image = "CentOS 7"
-    auto_delete  = true
-    boot         = true
-  }
+
   network_interface {
     # A default network is created for all GCP projects
     network       = "default"
