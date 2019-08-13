@@ -11,12 +11,13 @@ resource "google_compute_instance_template" "vm_instance" {
   count               = "${var.count}"
   # name  = "${var.name_prefix}-${count.index}"
 
-    // Use an existing disk resource
+
  // Create a new boot disk from an image
-  disk {
-    source_image = "centos-cloud/centos-7"
-    auto_delete  = true
-    boot         = true
+
+  boot_disk {
+    initialize_params {
+      image = "centos-cloud/centos-7"
+    }
   }
  
 

@@ -19,6 +19,6 @@ variable "zone" {
 }
 
 variable "machine_type" {
-    default = "n1-standard-1"  
+    default = "f1-micro"  
 }
 
