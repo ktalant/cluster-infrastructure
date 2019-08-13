@@ -12,7 +12,7 @@ resource "google_compute_instance_template" "vm_instance" {
   # name  = "${var.name_prefix}-${count.index}"
 
     // Use an existing disk resource
-  boot_disk {
+  disk {
     initialize_params {
       image = "centos-cloud/centos-7"
     }
