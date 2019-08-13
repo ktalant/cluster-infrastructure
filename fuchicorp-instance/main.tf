@@ -3,7 +3,7 @@ provider "google" {
   region              = "${var.region}"
   zone                = "${var.zone}"
 }
-resource "google_compute_instance_template" "vm_instance" {
+resource "google_compute_instance" "vm_instance" {
   name                = "${var.instance_name}"
   machine_type        = "${var.machine_type}"
   
