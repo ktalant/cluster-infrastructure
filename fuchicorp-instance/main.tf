@@ -1,5 +1,5 @@
 provider "google" {
-  creadentials        = "${file("/root/keys/k8-cluster3-ece12d4803cf.json")}"
+  credentials         = "${file("PATH")}"
   project             = "${var.project}"
   region              = "${var.region}"
   zone                = "${var.zone}"
@@ -7,10 +7,11 @@ provider "google" {
 resource "google_compute_instance" "vm_instance" {
   name                = "${var.instance_name}"
   machine_type        = "${var.machine_type}"
-  
-  
-  count               = "${var.count}"
+
+
+  # count               = "${var.count}"
   # name  = "${var.name_prefix}-${count.index}"
+
 
  // Create a new boot disk from an image
 
@@ -19,7 +20,8 @@ resource "google_compute_instance" "vm_instance" {
       image = "centos-cloud/centos-7"
     }
   }
- 
+
+
   network_interface {
     # A default network is created for all GCP projects
     network       = "default"
