@@ -12,7 +12,6 @@ resource "google_compute_instance" "vm_instance" {
   count               = "${var.count}"
   # name  = "${var.name_prefix}-${count.index}"
 
-
  // Create a new boot disk from an image
 
   boot_disk {
