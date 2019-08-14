@@ -1,21 +1,17 @@
 variable "instance_name" {
-  default = "bastion-tf"
+  default = "bastion-fuchicorp"
 }
 
-# variable "count" {
-#   default = "1"
-# }
-
 variable "project" {
-  default = "k8-cluster3"
+  default = "fuchicorp-project-248118"
 }
 
 variable "region" {
-  default = "us-central1"
+  default = "us-west1-b"
 }
 
 variable "zone" {
-  default = "us-central1-a"
+  default = "us-west1-b"
 }
 
 variable "machine_type" {
