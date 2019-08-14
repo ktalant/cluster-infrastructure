@@ -1,4 +1,5 @@
 provider "google" {
+  creadentials        = "${file("/root/keys/k8-cluster3-ece12d4803cf.json")}"
   project             = "${var.project}"
   region              = "${var.region}"
   zone                = "${var.zone}"

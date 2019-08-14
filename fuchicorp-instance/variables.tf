@@ -7,7 +7,7 @@ variable "count" {
 }
 
 variable "project" {
-  default = "universal-team-245120"
+  default = "k8-cluster3"
 }
 
 variable "region" {
