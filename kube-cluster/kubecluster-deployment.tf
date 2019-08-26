@@ -12,6 +12,6 @@ resource "google_container_cluster" "cluster_fuchicorp_com" {
     project             = "${var.project}"
 
     node_config {
-      machine_type      = "n1-standard-4"
+      machine_type      = "n2-standard-2"
   }
 }
