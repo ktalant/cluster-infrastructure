@@ -1,6 +1,6 @@
 provider "google" {
-  credentials   = "${file("/Users/fsadykov/fuchicorp-service-account.json")}"   #GOOGLE_CREDENTIALS to the path of a file containing the credential JSON
-  project       = "${var.project}"
+  credentials   = "${file("./fuchicorp-service-account.json")}"   #GOOGLE_CREDENTIALS to the path of a file containing the credential JSON
+  project       = "${var.google_project_id}"
 }
 resource "google_container_cluster" "cluster_fuchicorp_com" {
     name                = "${var.cluster_name}"
@@ -9,9 +9,9 @@ resource "google_container_cluster" "cluster_fuchicorp_com" {
     zone                = "us-central1-a"
     min_master_version  = "1.12.8-gke.10"
     initial_node_count  = "${var.node_count}"
-    project             = "${var.project}"
+    project             = "${var.google_project_id}"
 
     node_config {
-      machine_type      = "n2-standard-2"
+      machine_type      = "n1-standard-1"
   }
 }

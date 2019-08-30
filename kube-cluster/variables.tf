@@ -6,7 +6,7 @@ variable "node_count" {
   default = "2"
 }
 
-variable "project" {
+variable "google_project_id" {
   default = "universal-team-245120"
 }
 
