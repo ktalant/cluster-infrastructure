@@ -1,7 +1,6 @@
 provider "google" {
-  credentials         = "${file("PATH")}"
+  credentials         = "${file("./fuchicorp-service-account.json")}"
   project             = "${var.project}"
-  region              = "${var.region}"
   zone                = "${var.zone}"
 }
 resource "google_compute_instance" "vm_instance" {

@@ -3,15 +3,11 @@ variable "instance_name" {
 }
 
 variable "project" {
-  default = "fuchicorp-project-248118"
-}
-
-variable "region" {
-  default = "us-west1-b"
+  default = "fuchicorp-project-256020"
 }
 
 variable "zone" {
-  default = "us-west1-b"
+  default = "us-central1-a"
 }
 
 variable "machine_type" {
