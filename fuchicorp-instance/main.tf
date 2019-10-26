@@ -31,10 +31,10 @@ resource "google_compute_instance" "vm_instance" {
 
   cd  "/common_scripts/bastion-scripts/"
   python3 -m pip install -r "/common_scripts/bastion-scripts/requirements.txt"
-  python3 sync-users.py
+  cd /common_scripts/bastion-scripts/ && python3 sync-users.py
 
-  
-  echo "* 1 * * * cd /common_scripts/bastion-scripts/ && python3 sync-users.py" >> /sync-crontab
+
+  echo "* * * * * cd /common_scripts/bastion-scripts/ && python3 sync-users.py" >> /sync-crontab
   crontab /sync-crontab
 
 
