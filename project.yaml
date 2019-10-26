@@ -1,0 +1,121 @@
+commonInstanceMetadata:
+  fingerprint: VUCscJXKtvg=
+  items:
+  - key: gke-fuchicorp-cluster-8f3cefea-cidr
+    value: default:10.16.0.0/14
+  - key: sshKeys
+    value: gke-8f3cefeac6ebc4ac1885:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCor5j26Bh7HMW+SNhKP9EPx1dBsGlemPl0EvqEO4YAFff0PHBD/Y636I/dQLJoFmMwaBof/STopLqZ3I8A7BES/0x1e81vZbKFiqwgjxjk08G1kYSRLhfBzj/qGKt0ysNamuNycSHl3Q/S4vOjewD76F561pCuG5zSmXZZ5+xnRJP2XJ2/yWhREXkYMfx/IA2jkbR0IsimtF7ESVXXoRqkP+q3EawYLOk+yrls+T2MLOp6IaEHx6XVm9xA8KbVrmiDKWIFOOfxw7FkTlbWP/1ypRRwFl6eZjmAXryOp81NYdXMjokUxQRrJz09r4TDn6Hoi5wPwViUM33RKjJGRqnN
+      gke-8f3cefeac6ebc4ac1885@gke-8f3cefeac6ebc4ac1885
+  - key: ssh-keys
+    value: |
+      kuberpowerhtml:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAGok7zX4oPxWWylwhvIJ8qdlcdz7ZePxEhU8z6F51Euu+rN41eNbEekZivwvwaqH6YPq8DZvrGEGh3AZmey1k+m+YagVKCtuD2by+St+ZpEt2HWImdK269eH/eyYkmk0E/Gu632/MNa3ofbI4xZlAbq93K46rjNtHuF98reCbEyx23CB/8qpi8TnYWc30hznRyZMJqyb7sHcUUD4z+EL77aHmLRcyvoCrKqdRpbq7Lam872qTyvcrZIjhb3GV3Sebi1RtQtauoqnNgiykqe4U2SFfJSg2lGbTffhinEM7fgLKCSUBA46ddgUc4h+PAFPWdaLram4CKAvjjXYGfbqp9k= google-ssh {"userName":"kuberpowerhtml@gmail.com","expireOn":"2019-10-25T10:13:31+0000"}
+      kuberpowerhtml:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOGE7y37ILSVKUbn/ZAk3p1n8roKzjsMgvZkr/eyul7ooTdjOhM+6C/Mo0++E22w+WOoZEjNu3XTc87IW5jRZXg= google-ssh {"userName":"kuberpowerhtml@gmail.com","expireOn":"2019-10-25T10:13:29+0000"}
+  kind: compute#metadata
+creationTimestamp: '2019-10-15T14:20:47.246-07:00'
+defaultNetworkTier: PREMIUM
+defaultServiceAccount: 554337900974-compute@developer.gserviceaccount.com
+id: '6769976081220601536'
+kind: compute#project
+name: fuchicorp-project-256020
+quotas:
+- limit: 1000.0
+  metric: SNAPSHOTS
+  usage: 0.0
+- limit: 5.0
+  metric: NETWORKS
+  usage: 1.0
+- limit: 100.0
+  metric: FIREWALLS
+  usage: 10.0
+- limit: 100.0
+  metric: IMAGES
+  usage: 0.0
+- limit: 1.0
+  metric: STATIC_ADDRESSES
+  usage: 0.0
+- limit: 200.0
+  metric: ROUTES
+  usage: 23.0
+- limit: 15.0
+  metric: FORWARDING_RULES
+  usage: 1.0
+- limit: 50.0
+  metric: TARGET_POOLS
+  usage: 1.0
+- limit: 50.0
+  metric: HEALTH_CHECKS
+  usage: 1.0
+- limit: 8.0
+  metric: IN_USE_ADDRESSES
+  usage: 1.0
+- limit: 50.0
+  metric: TARGET_INSTANCES
+  usage: 0.0
+- limit: 10.0
+  metric: TARGET_HTTP_PROXIES
+  usage: 0.0
+- limit: 10.0
+  metric: URL_MAPS
+  usage: 0.0
+- limit: 5.0
+  metric: BACKEND_SERVICES
+  usage: 0.0
+- limit: 100.0
+  metric: INSTANCE_TEMPLATES
+  usage: 1.0
+- limit: 5.0
+  metric: TARGET_VPN_GATEWAYS
+  usage: 0.0
+- limit: 10.0
+  metric: VPN_TUNNELS
+  usage: 0.0
+- limit: 3.0
+  metric: BACKEND_BUCKETS
+  usage: 0.0
+- limit: 10.0
+  metric: ROUTERS
+  usage: 0.0
+- limit: 10.0
+  metric: TARGET_SSL_PROXIES
+  usage: 0.0
+- limit: 10.0
+  metric: TARGET_HTTPS_PROXIES
+  usage: 0.0
+- limit: 10.0
+  metric: SSL_CERTIFICATES
+  usage: 0.0
+- limit: 100.0
+  metric: SUBNETWORKS
+  usage: 20.0
+- limit: 10.0
+  metric: TARGET_TCP_PROXIES
+  usage: 0.0
+- limit: 12.0
+  metric: CPUS_ALL_REGIONS
+  usage: 6.0
+- limit: 10.0
+  metric: SECURITY_POLICIES
+  usage: 0.0
+- limit: 100.0
+  metric: SECURITY_POLICY_RULES
+  usage: 0.0
+- limit: 100.0
+  metric: NETWORK_ENDPOINT_GROUPS
+  usage: 0.0
+- limit: 6.0
+  metric: INTERCONNECTS
+  usage: 0.0
+- limit: 5000.0
+  metric: GLOBAL_INTERNAL_ADDRESSES
+  usage: 0.0
+- limit: 5.0
+  metric: VPN_GATEWAYS
+  usage: 0.0
+- limit: 0.0
+  metric: GPUS_ALL_REGIONS
+  usage: 0.0
+- limit: 5.0
+  metric: EXTERNAL_VPN_GATEWAYS
+  usage: 0.0
+selfLink: https://www.googleapis.com/compute/v1/projects/fuchicorp-project-256020
+xpnProjectStatus: UNSPECIFIED_XPN_PROJECT_STATUS

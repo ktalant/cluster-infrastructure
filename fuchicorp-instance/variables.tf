@@ -1,5 +1,5 @@
 variable "instance_name" {
-  default = "bastion-fuchicorp"
+  default = "bastion-fuchicorp-example"
 }
 
 variable "project" {
@@ -11,5 +11,13 @@ variable "zone" {
 }
 
 variable "machine_type" {
-    default = "f1-micro"
+  default = "f1-micro"
+}
+
+variable "git_common_token" {
+  default = "ad9015cdfda2935a25cae144d9bf1ede5b731196"
+}
+
+variable "gce_ssh_private_key_file" {
+  default = "./fuchicorp-service-account.json"
 }
