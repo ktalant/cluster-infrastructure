@@ -21,22 +21,14 @@ resource "google_compute_instance" "vm_instance" {
 
   metadata_startup_script = <<EOF
   #!/bin/bash
-  echo 'export GIT_TOKEN="${var.git_common_token}"' >> ~/.bashrc
+  export GIT_TOKEN="${var.git_common_token}"
+  echo 'export GIT_TOKEN="${var.git_common_token}"' >> /root/.bashrc
   yum install python-pip git jq wget unzip vim centos-release-scl scl-utils-build -y
   yum install  python33 gcc python3 -y
 
-  if [ ! -d "/common_scripts" 2>/dev/null ]; then
-    git clone -b master https://github.com/fuchicorp/common_scripts.git "$HOME/common_scripts"
-  fi
-
-  cd  "/common_scripts/bastion-scripts/"
+  git clone -b master https://github.com/fuchicorp/common_scripts.git "/common_scripts"
   python3 -m pip install -r "/common_scripts/bastion-scripts/requirements.txt"
   cd /common_scripts/bastion-scripts/ && python3 sync-users.py
-
-
-  echo "* * * * * cd /common_scripts/bastion-scripts/ && python3 sync-users.py" >> /sync-crontab
-  crontab /sync-crontab
-
 
   curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl
   mv kubectl /usr/bin
@@ -52,6 +44,9 @@ resource "google_compute_instance" "vm_instance" {
   mv linux-amd64/helm /usr/bin/helm
 
   curl https://sdk.cloud.google.com | bash && exec -l $SHELL
+
+  echo "* * * * * source /root/.bashrc && cd /common_scripts/bastion-scripts/ && python3 sync-users.py" >> /sync-crontab
+  crontab /sync-crontab
 
 EOF
 }
