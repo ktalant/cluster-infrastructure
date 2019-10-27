@@ -50,3 +50,11 @@ resource "google_compute_instance" "vm_instance" {
 
 EOF
 }
+
+resource "google_dns_record_set" "fuchicorp" {
+  managed_zone = "${var.managed_zone}"
+  name         = "bastion.fuchicorp.com."
+  type         = "A"
+  ttl          = 300
+  rrdatas      = ["${google_compute_instance.vm_instance.network_interface.0.access_config.0.nat_ip}"]
+}

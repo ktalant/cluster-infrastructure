@@ -16,6 +16,6 @@ variable "machine_type" {
 
 variable "git_common_token" {}
 
-variable "gce_ssh_private_key_file" {
-  default = "./fuchicorp-service-account.json"
+variable "managed_zone" {
+  default = "fuchicorp"
 }
