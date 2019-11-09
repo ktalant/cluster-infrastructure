@@ -3,7 +3,7 @@ variable "cluster_name" {
 }
 
 variable "node_count" {
-  default = "2"
+  default = "3"
 }
 
 variable "google_project_id" {
