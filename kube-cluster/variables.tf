@@ -18,7 +18,7 @@ variable "region" {
   default = "us-central1"
 }
 
-variable "bucket_name" {
+variable "google_bucket_name" {
   default = "fuchicorp-bucket"
 }
 
