@@ -1,5 +1,5 @@
-resource "google_dns_managed_zone" "talantzon" {
-  dns_name = "talantbek.com."
-  name     = "talantzon"
+resource "google_dns_managed_zone" "fuchicorp" {
+  dns_name = "talantzon.com"
+  name     = "fuchicorp"
   project  = "${var.google_project_id}"
 }
