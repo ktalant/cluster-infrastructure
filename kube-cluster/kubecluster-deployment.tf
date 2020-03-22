@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_container_cluster" "cluster_fuchicorp_com" {
-  name               = "${var.goog_cluster_name}"
+  name               = "${var.google_cluster_name}"
   network            = "default"
   subnetwork         = "default"
   location           = "us-central1-a"

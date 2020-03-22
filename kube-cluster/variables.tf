@@ -1,4 +1,4 @@
-variable "cluster_name" {
+variable "google_cluster_name" {
   default = "spacextech-cluster"
 }
 
