@@ -1,5 +1,5 @@
 variable "cluster_name" {
-  default = "fuchicorp-cluster"
+  default = "spacextech-cluster"
 }
 
 variable "node_count" {
@@ -7,11 +7,11 @@ variable "node_count" {
 }
 
 variable "google_project_id" {
-  default = "universal-team-245120"
+  default = "talantzon"
 }
 
 variable "service_account_path" {
-  default = "./fuchicorp-service-account.json"
+  default = "./google-service-account.json"
 }
 
 variable "region" {

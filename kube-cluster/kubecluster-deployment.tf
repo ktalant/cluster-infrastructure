@@ -4,11 +4,11 @@ provider "google" {
 }
 
 resource "google_container_cluster" "cluster_fuchicorp_com" {
-  name               = "${var.cluster_name}"
+  name               = "${var.goog_cluster_name}"
   network            = "default"
   subnetwork         = "default"
   location           = "us-central1-a"
-  min_master_version = "${var.cluster_version}"
+  min_master_version = "${var.google_cluster_version}"
   initial_node_count = "${var.node_count}"
   project            = "${var.google_project_id}"
 
