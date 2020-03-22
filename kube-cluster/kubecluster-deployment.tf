@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file("./talant-account.json")}" #GOOGLE_CREDENTIALS to the path of a file containing the credential JSON
+  credentials = "${file("./google-service-account.json")}" #GOOGLE_CREDENTIALS to the path of a file containing the credential JSON
   project     = "${var.google_project_id}"
 }
 
